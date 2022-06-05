@@ -57,15 +57,21 @@ body {
 
 @keyframes visible {
   0% {
-    transform: scale(0.8) translateX(300%);
-    visibility: visible;
+    transform: scale(0.8) translateX(150%);
+    visibility: hidden;
   }
   50% {
-    transform: scale(1.2) translateX(0);
+    transform: scale(1.2) translateX(0%);
+    visibility: visible;
+  }
+
+  75% {
+    transform: scale(0.8) translateX(0%);
+    opacity: 1;
   }
   100% {
-    transform: scale(0.8);
-    visibility: hidden;
+    transform: scale(0.8) translateX(-150%);
+    opacity: 0;
   }
 }
 
@@ -84,7 +90,7 @@ body {
     transform: translateY(5%);
   }
   100% {
-    animation-fill-mode: backwards;
+    transform: translateY(0);
   }
 }
 .processing-label {
@@ -103,7 +109,7 @@ body {
   animation-name: lighting;
   animation-duration: 10s;
   animation-iteration-count: 1;
-  animation-delay: 3500ms;
+  animation-delay: 4000ms;
   animation-fill-mode: forwards;
 }
 
@@ -111,7 +117,7 @@ body {
   0% {
     opacity: 1;
   }
-  100% {
+  /* 100% {
     opacity: 0;
-  }
+  } */
 }
