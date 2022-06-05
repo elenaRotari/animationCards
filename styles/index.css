@@ -49,7 +49,7 @@ body {
 
 .processing-item:nth-child(3) {
   animation-name: visibleStop;
-  animation-duration: 4s;
+  animation-duration: 2000ms;
   animation-iteration-count: 1;
   animation-delay: 4000ms;
   animation-fill-mode: forwards;
@@ -78,7 +78,7 @@ body {
 @keyframes visibleStop {
   0% {
     visibility: visible;
-    transform: translateY(-300%);
+    transform: translateY(-150%);
   }
   20% {
     transform: translateY(15%);
@@ -91,6 +91,7 @@ body {
   }
   100% {
     transform: translateY(0);
+    visibility: visible;
   }
 }
 .processing-label {
@@ -107,7 +108,7 @@ body {
 
 .processing-label:nth-of-type(2) {
   animation-name: lighting;
-  animation-duration: 10s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-delay: 4000ms;
   animation-fill-mode: forwards;
@@ -115,9 +116,9 @@ body {
 
 @keyframes lighting {
   0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
-  /* 100% {
-    opacity: 0;
-  } */
 }
